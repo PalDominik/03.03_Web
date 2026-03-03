@@ -28,6 +28,13 @@ function tombosszegzo()
     document.getElementById("osszegzo").textContent = `A tömb összege: ${sum} `;
 }
 
+function tombatlag()
+{
+    let sum = tombosszegzo();
+    let index = tomb.length;
+    document.getElementById("atlag").textContent = `A tömb átlaga: ${sum/index}`;
+}
+
 
 function init()
 {
@@ -35,6 +42,7 @@ function init()
     // console.log(tomb);
     tombokKiiratasa();
     tombosszegzo();
+    tombatlag();
 
 }
 
