@@ -9,11 +9,33 @@ function tombfeltoltes()
 }
 
 
+function tombokKiiratasa()
+{
+    let elemekVesszovelTagolva = "";
+    tomb.forEach(elem => {
+            elemekVesszovelTagolva +=elem + ", "; 
+    });
+    document.getElementById("tombok").textContent = elemekVesszovelTagolva;
+
+}
+
+function tombosszegzo()
+{
+    let sum = 0;
+    tomb.forEach(elem => {
+        sum += elem;
+    });
+    document.getElementById("osszegzo").textContent = `A tömb összege: ${sum} `;
+}
+
 
 function init()
 {
     tombfeltoltes();
-    console.log(tomb);
+    // console.log(tomb);
+    tombokKiiratasa();
+    tombosszegzo();
+
 }
 
 document.addEventListener("DOMContentLoaded",init);
